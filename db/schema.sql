@@ -1,0 +1,5 @@
+CREATE TABLE restaurants (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    rest_name VARCHAR(30) NOT NULL
+
+);
