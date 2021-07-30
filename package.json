@@ -1,0 +1,28 @@
+{
+  "name": "fooder_01",
+  "version": "1.0.0",
+  "description": "its Tinder but for restaurants",
+  "main": "server.js",
+  "dependencies": {
+    "demon": "^1.4.4",
+    "exphbs": "^1.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imjord/fooder_01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imjord/fooder_01/issues"
+  },
+  "homepage": "https://github.com/imjord/fooder_01#readme"
+}
