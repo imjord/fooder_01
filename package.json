@@ -4,12 +4,6 @@
   "description": "its Tinder but for restaurants",
   "main": "server.js",
   "dependencies": {
-<<<<<<< HEAD
-    "demon": "^1.4.4",
-    "exphbs": "^1.2.0",
-    "express": "^4.17.1",
-    "mysql2": "^2.2.5",
-=======
     "connect-session-sequelize": "^7.1.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2",
@@ -19,7 +13,6 @@
     "mysql2": "^2.2.5",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
->>>>>>> b26c17ca7172666f1dec6f40e9ee93a26d0854f9
     "sequelize": "^6.6.5"
   },
   "devDependencies": {},
