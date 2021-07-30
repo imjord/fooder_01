@@ -1,3 +1,5 @@
-DROP DATABASE IF EXISTS fooder_db;
+CREATE TABLE restaurants (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    rest_name VARCHAR(30) NOT NULL
 
-CREATE DATABASE fooder_db;
+);
