@@ -28,6 +28,14 @@ router.post('/api/user/login', (req, res) => {
 
 })
 
+
+
+
+
+router.put('/like', (req, res) => {
+
+});
+
 router.put('/:id', (req, res) => {
 
     User.update(req.body, {
