@@ -23,18 +23,9 @@ app.use(express.json()); // parse incoming json data
 app.use(express.static('public')); // instruct server to make certain files readyly avaliable and not gate behind an endpoint 
 
 
-// connect to mysql database 
+// app.use(require('./controllers'));
+// app.use(require('./routes'));
 
-const db = mysql.createConnection(
-    {
-        host: 'localhost', // maybe need to change to heroku port not shore 
-        // my sql username.pass dont steal pl0x
-        user: 'root',
-        password: '1290BecomeEZdeveloper123',
-        database: 'fooder_db'
-    },
-    console.log('database running.')
-)
 
 const hbs = exphbs.create();
 app.engine('handlebars', hbs.engine);
@@ -42,31 +33,34 @@ app.set('view engine', 'handlebars');
 
 
 
-// app.set('views', path.join(__dirname, 'views'))   // join views dir
+app.set('views', path.join(__dirname, 'views'))   // join views dir
 
 
 
-
+app.get('/', (req, res)=>{
+  res.render('main.handlebars');
+})
 
 
 
 
 
 // login page route 
-app.get('/login', (req, res, next) => {
-    res.sendFile([path.join(__dirname, '')]);  
-})
+// app.get('/login', (req, res, next) => {
+//     res.render([path.join(__dirname, '')]);  
+// })
 
-// home page
+// // home page
 
-app.get('/', (req, res, next) => {
-    res.sendFile([path.join(__dirname, '')]);  
-})
+// app.get('/', (req, res, next) => {
+//     res.render([path.join(__dirname, '')]);  
+// })
 
-// wildcard route 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, ''));
-  });
+// // wildcard route 
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, ''));
+
+//   });
 
 
   
