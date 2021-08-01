@@ -2,7 +2,6 @@ const path = require('path')  // using path module to join views render
 const express = require('express'); // importing a library from node module
 const session = require('express-session'); 
 const exphbs = require('express-handlebars');
-const hbs = require('handlebars');
 const fs = require('fs');
 const mysql = require('mysql2');
 
@@ -13,7 +12,7 @@ const app = express(); // can use to chain express methods
 const PORT = process.env.port || 3001; // heroku port 
 
 const sequelize = require("./config/connection");
-const { defaultValueSchemable } = require('sequelize/types/lib/utils');
+// const { defaultValueSchemable } = require('sequelize/types/lib/utils');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
@@ -37,7 +36,7 @@ const db = mysql.createConnection(
     console.log('database running.')
 )
 
-
+const hbs = exphbs.create();
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
