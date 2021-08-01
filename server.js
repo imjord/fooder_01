@@ -23,17 +23,15 @@ app.use(express.json()); // parse incoming json data
 app.use(express.static('public')); // instruct server to make certain files readyly avaliable and not gate behind an endpoint 
 
 
-// app.use(require('./controllers'));
-// app.use(require('./routes'));
 
 
 const hbs = exphbs.create();
-app.engine('handlebars', hbs.engine);
+app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 
 
-app.set('views', path.join(__dirname, 'views'))   // join views dir
+// app.set('views', path.join(__dirname, 'views'))   // join views dir
 
 
 
