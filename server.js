@@ -1,9 +1,11 @@
+
 const path = require('path')  // using path module to join views render 
 const express = require('express'); // importing a library from node module
 const session = require('express-session'); 
 const exphbs = require('express-handlebars');
 const mysql = require('mysql2');
 const hbs = exphbs.create({});
+
 
 
 
@@ -18,7 +20,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 app.use(express.urlencoded({ extended: true })); // parse incoming string or array data
 app.use(express.json()); // parse incoming json data 
 app.use(express.static('public')); // instruct server to make certain files readyly avaliable and not gate behind an endpoint 
-app.use(require('/controllers'));
+app.use(require('./controllers'));
 
 
 app.engine('handlebars', hbs.engine);
@@ -50,7 +52,7 @@ app.set('view engine', 'handlebars');
 app.use((req, res) => {
     res.status(404).end();
   });
-
+  
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('server live'));
