@@ -10,24 +10,21 @@ const { User } = require('..../models/User.js');
 
 // router.post('/', (req, res) => {});
 
-// router.post('/api/user/login', (req, res) => {
-//     User.findOne({
-//         where: {
-//             email: req.body.email
-//         }
-//     }).then(dbUserData => {
-//         if(!dbUserData){
-//             res.status(400).json({message: 'No user with that email address'});
-//             return;
+router.post('/api/user/login', (req, res) => {
+    User.findOne({
+        where: {
+            email: req.body.email
+        }
+    }).then(dbUserData => {
+    req.session.save(() => {
+    req.session.user_id = dbUserData.id;
+    req.session.username = dbUserData.username;
+    req.session.loggedIn = true;
 
-//         }
-//         res.json({ user: dbUserData });
-
-//         // verify user 
-//     })
-
-// })
-
+    res.json(dbUserData);
+  })
+})
+})
 
 
 
