@@ -26,7 +26,7 @@ app.use(express.static('public')); // instruct server to make certain files read
 
 
 const hbs = exphbs.create();
-app.engine('handlebars', exphbs());
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 
