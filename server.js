@@ -16,6 +16,19 @@ const sequelize = require("./config/connection");
 // const { defaultValueSchemable } = require('sequelize/types/lib/utils');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+// cookies
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+
+app.use(session(sess));
+
 // middleware 
 app.use(express.urlencoded({ extended: true })); // parse incoming string or array data
 app.use(express.json()); // parse incoming json data 
