@@ -4,9 +4,9 @@ const { restaurants , User, Likes } = require('../../models');
 
 
 
-// router.get('/', (req, res) => {
-//   res.render('homepage');
-// });
+router.get('/', (req, res) => {
+  res.send('hello ');
+});
 
 
 module.exports = router;
