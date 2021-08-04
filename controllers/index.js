@@ -1,20 +1,9 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
+const homeRoutes = require('./home-routes.js');
 
 
 
-
-
-
-
-
-router.get('/', (req, res)=>{
-    res.render('homepage', 'hbs');
-})
-
-
-
-
-
+router.use('/', homeRoutes);
 
 module.exports  = router;

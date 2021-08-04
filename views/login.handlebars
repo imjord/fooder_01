@@ -1,20 +1,18 @@
-<html>
-  <head>
-	<title>Fooder Login Form</title>
-  </head>
-  <body>
-	<form action="/login" method="post">
-  	<!-- user input-->
-  	Username:<br>
-  	<input type="text" name="username" placeholder="Username" required><br><br>
-  	Password:<br>
-  	<input type="password" name="password" placeholder="Password" required><br><br>
-  	<!-- submit button -->
-  	<input type="submit" value="login">
-	</form>
+<form class="login-form">
+  <div>
+    <label for="email-login">email:</label>
+    <input type="text" id="email-login" />
+  </div>
+  <div>
+    <label for="password-login">password:</label>
+    <input type="password" id="password-login" />
+  </div>
+  <div>
+    <button type="submit">login</button>
+  </div>
+</form>
 
-    {{!-- // sign up  --}}
-    <form class="signup-form">
+<form class="signup-form">
   <div>
     <label for="username-signup">username:</label>
     <input type="text" id="username-signup" />
@@ -34,5 +32,3 @@
 
 
 <script src="../public/JS/login.js"></script>
-  </body>
-</html>
