@@ -10,7 +10,7 @@ const hbs = exphbs.create({});
 
 
 const app = express(); // can use to chain express methods 
-const PORT = process.env.port || 3001; // heroku port 
+const PORT = process.env.PORT || 3001; // heroku port 
 
 const sequelize = require("./config/connection");
 // const { defaultValueSchemable } = require('sequelize/types/lib/utils');
