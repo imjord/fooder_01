@@ -1,5 +1,6 @@
 const User = require('./User')
 const Like = require('./Likes');
+const Restaurants = require('./restaurants')
 
 
 
