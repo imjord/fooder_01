@@ -1,29 +1,23 @@
 const router = require('express').Router();
-const sequelize =require('../../config/connection');
-const { restaurants , User, Likes } = require('../../models');
+const sequelize = require('../config/connection');
 
-const homeRoutes = require('./home-routes.js')
-
-
-
-router.use('/', homeRoutes);
-
-
-
+// const { restaurants , User, Likes } = require('../models');
 
 
 
 router.get('/', (req, res) => {
-  res.render('homepage', { 
-      id: 1,
-      post_url: 'https://handlebarsjs.com/guide/',
-      title: 'handlebars docs',
-      created_at: new Date(),
-      vote_count: 10,
-      user: {
-          username: 'test_user'
-      }
-  });
+  res.render('homepage');
 });
+
+
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
+});
+
 
 module.exports = router;
