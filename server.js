@@ -25,17 +25,6 @@ app.use(express.static('public')); // instruct server to make certain files read
 
 // connect to mysql database 
 
-const db = mysql.createConnection(
-    {
-        host: 'localhost', // maybe need to change to heroku port not shore 
-        // my sql username.pass dont steal pl0x
-        user: 'root',
-        password: '1290BecomeEZdeveloper123',
-        database: 'fooder_db'
-    },
-    console.log('database running.')
-)
-
 const hbs = exphbs.create();
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
