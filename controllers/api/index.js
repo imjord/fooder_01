@@ -1,15 +1,12 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 
-
-const apiRoutes = require('./api/');
-
-const loginRoutes = require('./login-route.js');
+const userRoutes = require('./user-routes.js');
+const postRoutes = require('./post-routes.js');
 
 
-router.use('/', homeRoutes);
-// router.use('/login', loginRoutes);
-// router.use('/api', apiRoutes);
+
+router.use('/users', userRoutes);
 
 
 module.exports  = router;
