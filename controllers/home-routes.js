@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-// const restaurantInfo = require('../seeds/index')
+const restaurantInfo = require('../seeds/restuarant-seeds')
 
 // const { restaurants , User, Likes } = require('../models');
 
@@ -19,10 +19,9 @@ router.get('/login', (req,res) => {
 
 router.get('/home', (req, res) => {
   res.render('homepage', {
-    // restaurant: restaurantInfo()
-      title: 'McDonalds',
-      description: "McDonald's is a fast food, limited service restaurant with more than 35,000 restaurants in over 100 countries.",
+    restaurants: restaurantInfo,
   });
+  console.log("Hello World!")
 });
 
 

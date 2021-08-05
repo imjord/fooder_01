@@ -18,17 +18,8 @@
     <h2 class="text-color2 text-center ">Finder</h2>
 </div>
 <div class="m-auto col-md-4 flex-column text-center h-100">
-    <div class="card border-3px">
-        <img src="https://via.placeholder.com/150" alt="picture of restaurant">
-    <div class="container">
-        <h4><b>{{title}}</b></h4>
-        <p>{{description}}</p>
-    </div>
-    <div class="sm-col-6">
-        <button id="yes-btn" class="mybtn mb-3">No</button>
-        <button id="no-btn" class="mybtn mb-3">Yes</button>
-
-    </div>
-    </div>
+    {{#each restaurants}}
+        {{restaurantCard this @index}}
+    {{/each}}
 </div>
-<script src="../public/JS/homepage.js"
+<script src="/JS/homepage.js"></script>
