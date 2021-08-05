@@ -6,6 +6,7 @@ const likesRoutes = require('./like-page-routes')
 
 
 router.use('/', homeRoutes);
+
 // router.use('/like', likesRoutes);
 
 module.exports  = router;
