@@ -24,6 +24,17 @@ hbs.handlebars.registerHelper("restaurantCard", function(item, index) {
   `);
 });
 
+hbs.handlebars.registerHelper("likedCards", function(item, index) {
+  return new hbs.handlebars.SafeString(`
+    <div id="card-${index}" class="card border-3px hidden col-md-4">
+      <img src="${item.image}" alt="picture of restaurant" crossOrigin="Anonymous" />
+      <div class="container">
+          <h4><b>${item.title}</b></h4>
+          <p>${item.description}</p>
+      </div>
+    </div>
+  `);
+});
 
 
 const app = express(); // can use to chain express methods 
