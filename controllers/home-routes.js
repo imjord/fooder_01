@@ -28,7 +28,7 @@ router.get('/home', (req, res) => {
 
 router.get('/likes-page', (req,res) => {
   res.render('likes-page', {
-    title: 'McDonalds'
+    restaurants: restaurantInfo,
   });
 })
 
