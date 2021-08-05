@@ -1,11 +1,9 @@
 const User = require('./User')
 const Like = require('./Likes');
-const Restaurants = require('./restaurants')
+const Restaurants = require('./Restaurants')
 
 
-
-
-User.belongsToMany(User, {
+Restaurants.belongsToMany(User, {
     through: Like,
     as: 'liked_posts',
     foreignKey: 'user_id'
@@ -21,4 +19,4 @@ User.belongsToMany(User, {
     foreignKey: 'user_id'
   });
 
-module.exports = { User, Like };
+module.exports = { User, Like, Restaurants };

@@ -1,7 +1,9 @@
 // Restaurants model
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+
 class Restaurants extends Model{}
+
 Restaurants.init(
     {
         id: {
@@ -25,3 +27,5 @@ Restaurants.init(
         modelName: 'restaurants'
     }
 )
+
+module.exports = Restaurants;
