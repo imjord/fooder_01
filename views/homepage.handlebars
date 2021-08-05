@@ -1,17 +1,25 @@
+<header class="navbar color2-gradient mb-4">
+        <div class="">
+            <h1 class="rounded-lg color1 p-2 font-weight-bold"><a href="/" class="text-color1 link">fooder</a></h1>
+        </div>
+        <div class="d-flex">
+            <a class="text-color1 m-2 mybtn link" href="/home">Home</a>
+            <a class="text-color1 m-2 mybtn link" href="/likes-page">Likes</a>
+            {{#if loggedIn}}
+            <a id="logout" class="tcolor1 m-2 mybtn link">Logout</a>
+            {{else}}
+            <a class="tcolor1 m-2 mybtn" href="/login">Logout</a>
+            {{/if}}
+        </div>
+
+</header>
+
 <div class="col-12 col-lg flex-row text-center"> 
     <h2 class="text-color2 text-center ">Finder</h2>
 </div>
 <div class="m-auto col-md-4 flex-column text-center h-100">
-    <div class="card border-3px">
-        <img src="https://via.placeholder.com/150" alt="picture of restaurant">
-    <div class="container">
-        <h4><b>{{title}}</b></h4>
-        <p>Description</p>
-    </div>
-    <div class="sm-col-6">
-        <button id="yes-btn" class="mybtn mb-3">No</button>
-        <button id="no-btn" class="mybtn mb-3">Yes</button>
-
-    </div>
-    </div>
+    {{#each restaurants}}
+        {{restaurantCard this @index}}
+    {{/each}}
 </div>
+<script src="/JS/homepage.js"></script>

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
+const restaurantInfo = require('../seeds/restuarant-seeds')
 
 // const { restaurants , User, Likes } = require('../models');
 
@@ -17,14 +18,18 @@ router.get('/login', (req,res) => {
 })
 
 router.get('/home', (req, res) => {
-  res.render('homepage');
+  res.render('homepage', {
+    restaurants: restaurantInfo,
+  });
+  console.log("Hello World!")
 });
 
 
 
-
 router.get('/likes-page', (req,res) => {
-  res.render('likes-page')
+  res.render('likes-page', {
+    title: 'McDonalds'
+  });
 })
 
 
