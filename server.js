@@ -3,10 +3,10 @@ const path = require('path')  // using path module to join views render
 const express = require('express'); // importing a library from node module
 const session = require('express-session'); 
 const exphbs = require('express-handlebars');
-// const passport = require('passport');
+const passport = require('passport');
 const hbs = exphbs.create({});
 
-// require('./config/passport', passport);
+require('./config/passport', passport);
 
 
 
@@ -43,8 +43,8 @@ app.use(require('./controllers'));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
 
 // login page route 
 // app.get('/login', (req, res, next) => {

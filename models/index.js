@@ -3,13 +3,6 @@ const Like = require('./Likes');
 const Restaurants = require('./Restaurants')
 
 
-Restaurants.belongsToMany(User, {
-    through: Like,
-    as: 'liked_posts',
-    foreignKey: 'user_id'
-  });
-
-
   Like.belongsTo(User, {
     foreignKey: 'user_id'
   });
