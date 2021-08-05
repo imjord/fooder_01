@@ -49,7 +49,7 @@ app.set('view engine', 'handlebars');
 // // home page
 
 // app.get('/', (req, res, next) => {
-//     res.render([path.join(__dirname, '')]);  
+//     res.render([path.join(__dirname, "views/homepage.handlebars")]);  
 // })
 
 // // wildcard route 
