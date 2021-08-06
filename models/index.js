@@ -1,6 +1,6 @@
 const User = require('./User')
 const Like = require('./Likes');
-const Restaurants = require('./Restaurants')
+const Restaurants = require('./restaurants')
 
 
   Like.belongsTo(User, {
