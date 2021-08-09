@@ -17,8 +17,8 @@ hbs.handlebars.registerHelper("restaurantCard", function(item, index) {
           <p>${item.description}</p>
       </div>
       <div class="sm-col-6">
-          <button id="no-btn-${index}" class="mybtn mb-3">No</button>
-          <button id="yes-btn-${index}" class="mybtn mb-3">Yes</button>
+          <button id="no-btn-${index}" class="mybtn_n mb-3">No</button>
+          <button id="yes-btn-${index}" class="mybtn_y mb-3">Yes</button>
       </div>
     </div>
   `);
