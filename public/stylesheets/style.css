@@ -19,6 +19,29 @@ body{
     color: coral;
 }
 
+.login-btn {
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(233, 156, 84);
+    border-color: whitesmoke;
+}
+
+.login-btn:hover {
+    text-decoration: none;
+    color: rgb(92, 84, 81);
+    background-color: rgb(172, 120, 73);
+}
+
+footer {
+    color: white;
+    background-color: rgb(228, 153, 124);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 35px;
+}
+
 .navbar {
     filter: drop-shadow(2px 5px 4px rgb(160, 160, 160));
 }
@@ -45,4 +68,34 @@ img {
 
 .shown {
     display: unset;
+}
+
+.mybtn_y {
+    border-radius: 25px;
+    margin-left: 10px;
+    background-color: yellowgreen;
+    border: none;
+    color: whitesmoke;
+}
+
+.mybtn_y:hover {
+    border-radius: 25px;
+    margin-left: 10px;
+    background-color: rgb(88, 119, 25);
+    border: none;
+}
+
+.mybtn_n {
+    border-radius: 25px;
+    margin-right: 10px;
+    background-color: tomato;
+    border: none;
+    color: whitesmoke;
+}
+
+.mybtn_n:hover {
+    border-radius: 25px;
+    margin-right: 10px;
+    background-color: rgb(163, 54, 35);
+    border: none;
 }
